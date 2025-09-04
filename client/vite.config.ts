@@ -7,7 +7,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'https://ecommerce-chatbot-ga4a.onrender.com',
+        target: 'https://v0-ec-ommerce-chat-bot.vercel.app/',
         changeOrigin: true,
         secure: false,
       }
