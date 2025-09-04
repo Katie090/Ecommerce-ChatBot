@@ -7,7 +7,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'https://v0-ec-ommerce-chat-bot.vercel.app/',
+        target: "http://localhost:8080",
         changeOrigin: true,
         secure: false,
       }

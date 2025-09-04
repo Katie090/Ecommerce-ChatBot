@@ -33,7 +33,7 @@ export default function Chat() {
   const [proactive, setProactive] = useState<{ id: string; text: string } | null>(null)
   const [showReplyModal, setShowReplyModal] = useState(false)
   const [replyInput, setReplyInput] = useState('')
-  const [showChat, setShowChat] = useState<boolean>(false)
+  const [showChat, setShowChat] = useState<boolean>(() => !!localStorage.getItem('conversationId'))
   const [showLauncher, setShowLauncher] = useState<boolean>(false)
   const behavior = useBehavioralContext(userId)
 
@@ -53,6 +53,7 @@ export default function Chat() {
     if (conversationId) {
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
       loadMessagesIfAny(conversationId)
+      setShowChat(true)
     }
     // run once on mount and when conversationId changes
   }, [conversationId])
