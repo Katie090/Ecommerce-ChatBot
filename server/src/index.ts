@@ -8,7 +8,7 @@ import { Router } from 'express'
 import { supabaseAdmin } from './lib/supabase'
 import { randomUUID } from 'crypto'
 import behaviorRouter from './routes/behavior'
-import { supabaseAdmin } from './lib/supabase'
+
 
 const app = express()
 app.use(cors({ origin: ['http://localhost:5173'], credentials: true }))
