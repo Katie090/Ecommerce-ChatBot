@@ -1,0 +1,24 @@
+{
+  "name": "ecommerce-support-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "@supabase/supabase-js": "^2.45.4",
+    "zod": "^3.23.8",
+    "node-fetch": "^3.3.2",
+    "cookie-parser": "^1.4.6"
+  },
+  "devDependencies": {
+    "tsx": "^4.16.2",
+    "typescript": "^5.4.5"
+  }
+}
