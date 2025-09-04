@@ -7,7 +7,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://localhost:8080',
+        target: 'https://ecommerce-chatbot-ga4a.onrender.com',
         changeOrigin: true,
         secure: false,
       }
